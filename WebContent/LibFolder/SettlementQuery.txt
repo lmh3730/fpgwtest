@@ -1,0 +1,11 @@
+미결제문서 불러오는 Query
+
+select count(문서상세번호) from 문서처리자 관리
+where (결제여부='N' and 결재순번='내번호')
+and (결제여부='Y' and 결재순번='내번호-1')
+
+
+select count(문서상세번호) from 문서처리자 관리
+where (결제여부='N' and 결재자='내아이디')
+and (결제여부='Y' and 결재순번='내결재순번-1')
+
